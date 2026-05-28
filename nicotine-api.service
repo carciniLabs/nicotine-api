@@ -1,0 +1,14 @@
+[Unit]
+Description=Nicotine+ REST API Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/nicotine-api
+ExecStart=/usr/bin/node index.js
+Restart=always
+StandardOutput=append:/var/log/nicotine-api.log
+StandardError=append:/var/log/nicotine-api.log
+
+[Install]
+WantedBy=default.target
