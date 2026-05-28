@@ -78,6 +78,26 @@ SearchScreen {
     color: $text-muted;
 }
 
+/* ── Extension Filter Bar ─────────────────────────────────────────────── */
+
+#filter-bar {
+    dock: top;
+    height: 3;
+    padding: 0 1;
+    layout: horizontal;
+    align: left middle;
+}
+
+#filter-label {
+    margin-right: 1;
+    color: $text-muted;
+    text-style: bold;
+}
+
+#ext-filter {
+    width: 14;
+}
+
 #results-table {
     margin: 0 1;
 }
@@ -182,6 +202,28 @@ Toast.-warning {
     padding: 0 1;
     color: $accent;
     text-style: bold;
+}
+
+/* ── Splash Screen ────────────────────────────────────────────────────── */
+
+SplashScreen {
+    layout: vertical;
+    align: center middle;
+    background: #0d1117;
+}
+
+#splash-title {
+    text-align: center;
+    color: cyan;
+    text-style: bold;
+    padding: 1 2;
+    height: auto;
+}
+
+#splash-canvas {
+    layout: vertical;
+    height: 1fr;
+    color: cyan;
 }
 
 /* ── General utility ───────────────────────────────────────────────────── */
