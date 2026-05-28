@@ -1,0 +1,202 @@
+/* Soulseek TUI — dark-theme Textual CSS */
+
+/* ── App-wide ─────────────────────────────────────────────────────────── */
+
+Screen {
+    layout: vertical;
+    background: $surface;
+}
+
+/* ── Header / Footer ──────────────────────────────────────────────────── */
+
+Header {
+    background: $panel;
+    color: $text;
+    padding: 0 1;
+    height: 1;
+}
+
+Footer {
+    background: $panel;
+    color: $text-muted;
+    padding: 0 1;
+    height: 1;
+}
+
+Footer .footer--key {
+    background: $primary;
+    color: $text;
+    padding: 0 1;
+}
+
+Footer .footer--description {
+    color: $text-muted;
+}
+
+/* ── Status Bar (custom widget) ────────────────────────────────────────── */
+
+StatusBar {
+    dock: top;
+    height: 1;
+    background: $panel;
+    color: $text;
+    padding: 0 1;
+}
+
+_StatusSegment {
+    padding: 0 1;
+    height: 1;
+}
+
+/* ── Search Screen ────────────────────────────────────────────────────── */
+
+SearchScreen {
+    layout: vertical;
+}
+
+#search-input {
+    dock: top;
+    margin: 0 1;
+    height: 3;
+    border: tall $primary;
+    padding: 0 1;
+}
+
+#search-input:focus {
+    border: tall $accent;
+    text-style: bold;
+}
+
+#search-input.-invalid {
+    border: tall $error;
+}
+
+#search-status {
+    dock: top;
+    height: 1;
+    padding: 0 1;
+    color: $text-muted;
+}
+
+#results-table {
+    margin: 0 1;
+}
+
+/* ── Downloads Screen ─────────────────────────────────────────────────── */
+
+DownloadsScreen {
+    layout: vertical;
+}
+
+#downloads-table {
+    margin: 0 1;
+}
+
+#downloads-status {
+    dock: bottom;
+    height: 1;
+    padding: 0 1;
+    color: $text-muted;
+    background: $panel;
+}
+
+/* ── DataTable (global) ────────────────────────────────────────────────── */
+
+DataTable {
+    height: 1fr;
+}
+
+DataTable > .datatable--header {
+    background: $primary-background;
+    color: $text;
+    text-style: bold;
+}
+
+/* Alternating row colors */
+DataTable > .datatable--row:even {
+    background: $boost;
+}
+
+DataTable > .datatable--row:odd {
+    background: $surface;
+}
+
+/* Highlighted / cursor row */
+DataTable > .datatable--cursor-row {
+    background: $primary-darken-2;
+    color: $text;
+    text-style: bold;
+}
+
+DataTable > .datatable--cursor-row-hover {
+    background: $primary-darken-1;
+    color: $text;
+}
+
+/* Selected rows */
+DataTable > .datatable--selected-row {
+    color: $accent;
+}
+
+/* Column sizing: DataTable manages this internally.  The columns are */
+/* set up with reasonable widths at 80+ columns by default.          */
+
+/* ── Confirm Screen (modal) ────────────────────────────────────────────── */
+
+ConfirmScreen {
+    align: center middle;
+    height: auto;
+    max-width: 60;
+    padding: 1 2;
+    background: $boost;
+    border: tall $primary;
+}
+
+ConfirmScreen Static {
+    padding: 1;
+    text-align: center;
+}
+
+/* ── Toast / Notification ──────────────────────────────────────────────── */
+
+Toast {
+    padding: 0 1;
+    border: tall $accent;
+}
+
+Toast.-error {
+    border: tall $error;
+    color: $error;
+}
+
+Toast.-warning {
+    border: tall $warning;
+    color: $warning;
+}
+
+/* ── Loading overlay ───────────────────────────────────────────────────── */
+
+#search-loading {
+    dock: top;
+    height: 1;
+    padding: 0 1;
+    color: $accent;
+    text-style: bold;
+}
+
+/* ── General utility ───────────────────────────────────────────────────── */
+
+/* Ensure Input widgets have a consistent look */
+Input {
+    border: tall $primary;
+    padding: 0 1;
+}
+
+Input:focus {
+    border: tall $accent;
+}
+
+/* Vertical containers should fill available space */
+Vertical {
+    height: 1fr;
+}

@@ -1,0 +1,15 @@
+
+[Unit]
+Description=Nicotine+ REST API Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/crab/dev/nicotine-api
+ExecStart=/usr/bin/node index.js
+Restart=always
+StandardOutput=append:/home/crab/nicotine-api.log
+StandardError=append:/home/crab/nicotine-api.log
+
+[Install]
+WantedBy=default.target

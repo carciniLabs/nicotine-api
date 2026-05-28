@@ -1,0 +1,3 @@
+textual>=0.40
+httpx
+humanize
